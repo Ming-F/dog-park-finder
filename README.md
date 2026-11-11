@@ -1,10 +1,14 @@
 # 🐕 宠物友好公园查询（Dog Park Finder）— 一个 WorkBuddy Skill
 
+[![Version](https://img.shields.io/badge/version-0.1.0-blue)](CHANGELOG.md)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![WorkBuddy](https://img.shields.io/badge/WorkBuddy-Skill-6c5ce7)](https://www.workbuddy.cn)
+
 一个 [WorkBuddy](https://www.workbuddy.cn) 技能（skill），让你的个人智能体回答一个简单的问题：
 
 > **「附近哪里能遛狗？有什么限制？」**
 
-给定一个位置（通过 IP 自动定位，或用户口述），智能体会查找附近的公园，并**如实**报告每个公园的开放时间与遛狗限制（需牵绳、需登记、限体型、禁止携犬等）。
+给定一个位置（通过 IP 自动定位，或用户口述），智能体会查找附近的公园，并**如实**报告每个公园的开放时间与遛狗限制（需牵绳、需登记、限体型、禁止携犬等）。还能结合**实时天气与当前时间**，当下为你的狗规划一条合适的遛狗路线。
 
 ---
 
@@ -22,11 +26,16 @@
 
 ```
 dog-park-finder/
-├── SKILL.md                    # 触发条件 + 用法 + 合规红线
+├── SKILL.md                    # 触发条件 + 用法 + 合规红线 + 实时规划流程
+├── README.md                   # 项目说明
+├── CHANGELOG.md                # 版本记录
+├── LICENSE                     # MIT
 ├── data/
 │   └── places.json             # 已核实公园数据集（唯一数据源）
+├── examples/
+│   └── demo-conversation.md    # 实战对话示例
 ├── references/
-│   ├── places-schema.md        # 字段说明 & ruleLevel 枚举
+│   ├── places-schema.md        # 字段说明 & ruleLevel 枚举 & routes 结构
 │   └── policy.md               # 各城市养犬/公园政策背景
 └── scripts/
     ├── query_parks.py          # 主查询：定位 → 搜索 → 判定 → 降级
