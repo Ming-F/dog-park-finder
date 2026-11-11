@@ -48,20 +48,37 @@ dog-park-finder/
 
 ---
 
-## 🚀 安装
+## 📥 下载与安装
 
-把 `dog-park-finder` 文件夹复制到用户级 skill 目录：
+### 下载
+
+**方式一：git clone（推荐）**
+
+```bash
+git clone https://github.com/Ming-F/dog-park-finder.git
+```
+
+**方式二：下载 ZIP**
+
+点击仓库右上角绿色 **Code** 按钮 → **Download ZIP**，解压得到 `dog-park-finder` 文件夹。
+
+### 安装到 WorkBuddy
+
+把下载的 `dog-park-finder` 文件夹复制到用户级 skill 目录：
 
 ```bash
 mkdir -p ~/.workbuddy/skills
 cp -r dog-park-finder ~/.workbuddy/skills/
 ```
 
-WorkBuddy 会根据 `SKILL.md` 的 frontmatter 自动发现该技能。之后直接问：
+> 若在 Windows，用户级 skill 目录为 `C:\Users\<用户名>\.workbuddy\skills\`。
+
+WorkBuddy 会根据 `SKILL.md` 的 frontmatter 自动发现该技能，无需其他配置。之后直接问：
 
 - 「附近哪里能遛狗？」
 - 「朝阳区有什么能带狗的公园？」
 - 「狼垡公园能不能带狗？」
+- 「推荐一条遛狗路线」
 
 ---
 
